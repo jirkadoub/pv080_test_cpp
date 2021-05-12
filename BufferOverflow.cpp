@@ -31,12 +31,12 @@ void demoBufferOverflowData() {
 	printf("\n");
 
 	// Get user name
-	memset(userName, 1, USER_INPUT_MAX_LENGTH);
-	memset(passwd, 2, USER_INPUT_MAX_LENGTH);
+	memset(userName, 0, USER_INPUT_MAX_LENGTH);
+	memset(passwd, 0, USER_INPUT_MAX_LENGTH);
 	printf("login as: ");
 	fflush(stdout);
 	//gets(userName); // use scanf("%s", userName); if gets fails with identifier not found
-	scanf("%-20s", userName);
+	scanf("%s", userName);
 
 	// Get password
 	printf("%s@vulnerable.machine.com: ", userName);
